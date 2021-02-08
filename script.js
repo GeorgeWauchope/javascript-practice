@@ -20,6 +20,7 @@ button2.addEventListener('click', () => {
   button2.remove();
 });
 
+
 // let firstButton = document.createElement('button');
 // let p = document.createElement('p');
 // let secondButton = document.createElement('button');
