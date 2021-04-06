@@ -1,25 +1,46 @@
-let h1 = document.createElement('h1');
-let button = document.createElement('button');
-let p = document.createElement('p');
-let button2 = document.createElement('button');
+let h1 = document.createElement("h1");
+let button = document.createElement("button");
+let p = document.createElement("p");
+let button2 = document.createElement("button");
 
-h1.innerText = 'Click the button below!';
-button.innerText = 'Click me';
-p.innerText = 'Hi, click the below button to delete this.';
-button2.innerText = 'Click me to delete';
+h1.innerText = "Click the button below to see more text";
+button.innerText = "Click me";
+p.innerText = "This is new text, click the below button to delete this.";
+button2.innerText = "Click me to delete";
 
 document.body.append(h1, button);
 
-button.addEventListener('click', () => {
-  button.insertAdjacentElement('afterend', p);
-  p.insertAdjacentElement('afterend', button2);
+button.addEventListener("click", () => {
+  button.insertAdjacentElement("afterend", p);
+  p.insertAdjacentElement("afterend", button2);
 });
 
-button2.addEventListener('click', () => {
+button2.addEventListener("click", () => {
   p.remove();
   button2.remove();
 });
 
+// let h1 = document.createElement('h1');
+// let button = document.createElement('button');
+// let p = document.createElement('p');
+// let button2 = document.createElement('button');
+
+// h1.innerText = 'Click the button below!';
+// button.innerText = 'Click me';
+// p.innerText = 'Hi, click the below button to delete this.';
+// button2.innerText = 'Click me to delete';
+
+// document.body.append(h1, button);
+
+// button.addEventListener('click', () => {
+//   button.insertAdjacentElement('afterend', p);
+//   p.insertAdjacentElement('afterend', button2);
+// });
+
+// button2.addEventListener('click', () => {
+//   p.remove();
+//   button2.remove();
+// });
 
 // let firstButton = document.createElement('button');
 // let p = document.createElement('p');
