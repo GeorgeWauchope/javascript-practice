@@ -1,24 +1,41 @@
+//press a button, and 5 seconds later, text appears, using ASYNC to achieve this delayed response
 let h1 = document.createElement("h1");
-let button = document.createElement("button");
-let p = document.createElement("p");
-let button2 = document.createElement("button");
+let button1 = document.createElement("button");
+let image = document.createElement("img");
 
-h1.innerText = "Click the button below to see more text";
-button.innerText = "Click me";
-p.innerText = "This is new text, click the below button to delete this.";
-button2.innerText = "Click me to delete";
+h1.innerText = "Click the button below to load an image in 5 seconds";
+button1.innerText = "Click me";
+image.src = "https://miro.medium.com/max/1920/0*z1mm6izqSeDiKukb";
 
-document.body.append(h1, button);
+document.body.append(h1, button1);
 
-button.addEventListener("click", () => {
-  button.insertAdjacentElement("afterend", p);
-  p.insertAdjacentElement("afterend", button2);
+button1.addEventListener("click", () => {
+  setTimeout(() => {
+    button1.insertAdjacentElement("afterend", image);
+  }, 5000);
 });
 
-button2.addEventListener("click", () => {
-  p.remove();
-  button2.remove();
-});
+// let h1 = document.createElement("h1");
+// let button = document.createElement("button");
+// let p = document.createElement("p");
+// let button2 = document.createElement("button");
+
+// h1.innerText = "Click the button below to see more text";
+// button.innerText = "Click me";
+// p.innerText = "This is new text, click the below button to delete this.";
+// button2.innerText = "Click me to delete";
+
+// document.body.append(h1, button);
+
+// button.addEventListener("click", () => {
+//   button.insertAdjacentElement("afterend", p);
+//   p.insertAdjacentElement("afterend", button2);
+// });
+
+// button2.addEventListener("click", () => {
+//   p.remove();
+//   button2.remove();
+// });
 
 // let h1 = document.createElement('h1');
 // let button = document.createElement('button');
