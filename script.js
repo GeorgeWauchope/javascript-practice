@@ -15,6 +15,7 @@ button1.addEventListener("click", () => {
   }, 5000);
 });
 
+
 // let h1 = document.createElement("h1");
 // let button = document.createElement("button");
 // let p = document.createElement("p");
